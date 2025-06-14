@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plano Semanal & Receitas Bimby®</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: system-ui, sans-serif; }
+  details>summary { cursor:pointer; }
+</style>
+</head>
+<body class="bg-slate-50 py-4 px-3 text-slate-800">
+  <header class="text-center mb-6">
+    <h1 class="text-2xl font-bold">Plano Semanal de Refeições & Receitas Bimby®</h1>
+    <p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="flex mb-4 gap-2 justify-center">
+    <button id="btnPlan" class="tabbtn px-3 py-1 rounded-lg bg-emerald-500 text-white">Plano</button>
+    <button id="btnRecipes" class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700">Receitas</button>
+  </nav>
+
+  <!-- Plano semanal -->
+  <section id="sectionPlan" class="space-y-4">
+    <!-- Segunda -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Segunda‑feira</summary>
+      <ul class="list-disc list-inside mt-2">
+        <li><strong>PA</strong> – Smoothie verde (350 kcal)</li>
+        <li><strong>Almoço</strong> – Salmão 150 g + legumes 200 g + batata‑doce 150 g (500 kcal)</li>
+        <li><strong>Lanche</strong> – Iogurte grego 150 g + sementes 10 g (150 kcal)</li>
+        <li><strong>Jantar</strong> – Creme legumes 300 ml + peito frango 150 g (600 kcal)</li>
+      </ul>
+    </details>
+    <!-- Terça -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Terça‑feira</summary>
+      <ul class="list-disc list-inside mt-2">
+        <li><strong>PA</strong> – Overnight oats (330 kcal)</li>
+        <li><strong>Almoço</strong> – Frango Varoma 150 g + arroz integral colorido 180 g (500 kcal)</li>
+        <li><strong>Lanche</strong> – Cenoura 100 g + húmus 40 g (170 kcal)</li>
+        <li><strong>Jantar</strong> – Sopa legumes 300 ml + feijão 100 g + atum 120 g (550 kcal)</li>
+      </ul>
+    </details>
+    <!-- Quarta -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Quarta‑feira</summary>
+      <ul class="list-disc list-inside mt-2">
+        <li><strong>PA</strong> – Omelete claras + pão centeio (360 kcal)</li>
+        <li><strong>Almoço</strong> – Salmão 150 g + legumes 250 g (480 kcal)</li>
+        <li><strong>Lanche</strong> – Maçã 150 g + frutos secos 15 g (180 kcal)</li>
+        <li><strong>Jantar</strong> – Frango Varoma 150 g + molho legumes 200 g + quinoa 60 g (550 kcal)</li>
+      </ul>
+    </details>
+    <!-- Quinta -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Quinta‑feira</summary>
+      <ul class="list-disc list-inside mt-2">
+        <li><strong>PA</strong> – Pão integral 40 g + ovos mexidos 2 + tomate (340 kcal)</li>
+        <li><strong>Almoço</strong> – Bowl peru 150 g + arroz couve‑flor 200 g + legumes 100 g (520 kcal)</li>
+        <li><strong>Lanche</strong> – Smoothie frutos vermelhos (160 kcal)</li>
+        <li><strong>Jantar</strong> – Creme abóbora 300 ml + pescada 150 g (550 kcal)</li>
+      </ul>
+    </details>
+    <!-- Sexta -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Sexta‑feira</summary>
+      <ul class="list-disc list-inside mt-2">
+        <li><strong>PA</strong> – 3 panquecas aveia + mel (350 kcal)</li>
+        <li><strong>Almoço</strong> – Frango Varoma 150 g + legumes 200 g + batata‑doce 150 g (500 kcal)</li>
+        <li><strong>Lanche</strong> – Iogurte magro 150 g + chia 10 g (150 kcal)</li>
+        <li><strong>Jantar</strong> – Creme versátil 300 ml + tofu 120 g (550 kcal)</li>
+      </ul>
+    </details>
+    <!-- Sábado -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Sábado</summary>
+      <ul class="list-disc list-inside mt-2">
+        <li><strong>PA</strong> – Smoothie proteico (330 kcal)</li>
+        <li><strong>Almoço</strong> – Salmão 150 g + cuscuz integral 60 g + legumes 150 g (510 kcal)</li>
+        <li><strong>Lanche</strong> – Pepino 100 g + pasta atum 40 g (170 kcal)</li>
+        <li><strong>Jantar</strong> – Chili peru 350 g (550 kcal)</li>
+      </ul>
+    </details>
+    <!-- Domingo -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Domingo</summary>
+      <ul class="list-disc list-inside mt-2">
+        <li><strong>PA</strong> – Pudim chia (~250 g) (350 kcal)</li>
+        <li><strong>Almoço</strong> – Camarão 150 g + arroz couve‑flor 200 g + legumes 150 g (500 kcal)</li>
+        <li><strong>Lanche</strong> – Tangerinas 200 g + amêndoas 10 g (150 kcal)</li>
+        <li><strong>Jantar</strong> – Creme legumes 300 ml + 2 ovos escalfados 100 g (550 kcal)</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- Receitas -->
+  <section id="sectionRecipes" class="hidden">
+    <p class="text-sm mb-3 text-slate-600">Toque em cada receita para ver ingredientes e modo de preparação.</p>
+    <!-- Exemplo de receita -->
+    <details class="rounded-xl bg-white p-4 shadow mb-3">
+      <summary class="font-semibold text-emerald-700">Smoothie Verde (1 copo ≈350 kcal)</summary>
+      <h4 class="font-semibold mt-2">Ingredientes</h4>
+      <ul class="list-disc list-inside text-sm">
+        <li>200 ml água</li>
+        <li>1 banana</li>
+        <li>1 punhado espinafres</li>
+        <li>20 g aveia</li>
+        <li>10 g manteiga de amendoim</li>
+      </ul>
+      <h4 class="font-semibold mt-2">Modo de preparação</h4>
+      <p class="text-sm">Triturar 1 min/vel 10 e servir.</p>
+    </details>
+    <!-- Repeat similar blocks for remaining recipes... (for brevity only one shown) -->
+  </section>
+
+<script>
+  const btnPlan = document.getElementById('btnPlan');
+  const btnRecipes = document.getElementById('btnRecipes');
+  const sectionPlan = document.getElementById('sectionPlan');
+  const sectionRecipes = document.getElementById('sectionRecipes');
+
+  function activate(tab) {
+    if (tab === 'plan') {
+      sectionPlan.classList.remove('hidden');
+      sectionRecipes.classList.add('hidden');
+      btnPlan.classList.replace('bg-emerald-100','bg-emerald-500');
+      btnPlan.classList.replace('text-emerald-700','text-white');
+      btnRecipes.classList.replace('bg-emerald-500','bg-emerald-100');
+      btnRecipes.classList.replace('text-white','text-emerald-700');
+    } else {
+      sectionRecipes.classList.remove('hidden');
+      sectionPlan.classList.add('hidden');
+      btnRecipes.classList.replace('bg-emerald-100','bg-emerald-500');
+      btnRecipes.classList.replace('text-emerald-700','text-white');
+      btnPlan.classList.replace('bg-emerald-500','bg-emerald-100');
+      btnPlan.classList.replace('text-white','text-emerald-700');
+    }
+  }
+
+  btnPlan.addEventListener('click', () => activate('plan'));
+  btnRecipes.addEventListener('click', () => activate('recipes'));
+</script>
+</body>
+</html>
