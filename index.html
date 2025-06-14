@@ -1,102 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plano Semanal & Receitas Bimby®</title>
+  <title>Plano Semanal, Receitas & Treino</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: system-ui, sans-serif; }
-    details>summary { cursor:pointer; }
+    details > summary { cursor: pointer; }
   </style>
 </head>
-
 <body class="bg-slate-50 py-4 px-3 text-slate-800">
   <header class="text-center mb-6">
     <h1 class="text-2xl font-bold">Plano Semanal de Refeições & Receitas Bimby®</h1>
-    <p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
+    <p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
   </header>
-
-  <!-- Navegação -->
   <nav class="flex mb-4 gap-2 justify-center">
-    <button id="btnPlan"    class="px-3 py-1 rounded-lg bg-emerald-500 text-white">Plano</button>
-    <button id="btnWorkout" class="px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700">Treino</button>
-    <button id="btnRecipes" class="px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700">Receitas</button>
+    <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-500 text-white" id="btnPlan">Plano</button>
+    <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnWorkout">Treino</button>
+    <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnRecipes">Receitas</button>
   </nav>
 
-  <!-- PLANO SEMANAL -->
-  <section id="sectionPlan" class="space-y-4">
-    <!-- (teu conteúdo do plano – mantido) -->
-    <!-- … Segunda, Terça, … Domingo … -->
-    <!-- copiado exactamente como no teu código -->
+  <!-- Seção Plano -->
+  <section class="space-y-4" id="sectionPlan">
+    <!-- Colar aqui os <details> de cada dia da semana como estavam -->
   </section>
 
-  <!-- TREINO -->
-  <section id="sectionWorkout" class="hidden">
-    <div class="rounded-xl bg-white p-4 shadow">
-      <h2 class="font-semibold text-lg mb-2">Plano de Treino Semanal</h2>
-      <ul class="list-disc list-inside space-y-1 text-sm">
-        <li><strong>Segunda:</strong> Força – parte superior</li>
-        <li><strong>Terça:</strong> Cardio leve (30 min caminhada-rápida/bicicleta)</li>
-        <li><strong>Quarta:</strong> Força – parte inferior</li>
-        <li><strong>Quinta:</strong> Mobilidade & alongamentos (20 min)</li>
-        <li><strong>Sexta:</strong> HIIT 20 min (bicicleta ou circuito de peso corporal)</li>
-        <li><strong>Sábado:</strong> Actividade livre (natação, trilho, etc.)</li>
-        <li><strong>Domingo:</strong> Descanso activo (passeio leve, alongar)</li>
-      </ul>
-      <p class="text-xs text-slate-500 mt-3">
-        * Ajusta cargas, duração e intensidade conforme o teu nível. Mantém postura correcta e hidratação.
-      </p>
-    </div>
+  <!-- Seção Receitas -->
+  <section class="hidden" id="sectionRecipes">
+    <!-- Colar aqui os <details> de cada receita como estavam -->
   </section>
 
-  <!-- RECEITAS -->
-  <section id="sectionRecipes" class="hidden">
-    <p class="text-sm mb-3 text-slate-600">Toque em cada receita para ver ingredientes e modo de preparação.</p>
-    <!-- (todas as tuas receitas, exactamente como no código original) -->
+  <!-- Seção Treino -->
+  <section class="hidden space-y-4" id="sectionWorkout">
+    <p class="text-sm mb-3 text-slate-600">Plano de treino com imagens por exercício.</p>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Abdominais na bicicleta</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/abdominais_bicicleta.jpg" alt="Abdominais na bicicleta" class="my-2 rounded" />
+      <p>3 a 4 séries de 15 a 20 repetições.</p>
+    </details>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Afundos</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/afundos.jpg" alt="Afundos" class="my-2 rounded" />
+      <p>3 séries de 10 repetições por perna.</p>
+    </details>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Agachamento</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/agachamento.jpg" alt="Agachamento" class="my-2 rounded" />
+      <p>4 séries de 12 a 15 repetições.</p>
+    </details>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Bíceps com halteres</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/biceps.jpg" alt="Bíceps" class="my-2 rounded" />
+      <p>3 séries de 12 repetições.</p>
+    </details>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Bicicleta estática</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/bicicleta_estatica.jpg" alt="Bicicleta" class="my-2 rounded" />
+      <p>15 a 30 minutos de cardio.</p>
+    </details>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Elevação de pernas</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/elevacao_pernas.jpg" alt="Elevação de pernas" class="my-2 rounded" />
+      <p>3 a 4 séries de 12 repetições.</p>
+    </details>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Extensão de pernas</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/extensao_pernas.jpg" alt="Extensão de pernas" class="my-2 rounded" />
+      <p>3 séries de 15 repetições.</p>
+    </details>
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold">Flexões</summary>
+      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/flexoes.jpg" alt="Flexões" class="my-2 rounded" />
+      <p>3 séries de 10 a 15 repetições.</p>
+    </details>
+    <!-- Repetir com os restantes exercícios -->
   </section>
 
-  <!-- SCRIPT ÚNICO -->
   <script>
-    const btnPlan    = document.getElementById('btnPlan');
+    const btnPlan = document.getElementById('btnPlan');
     const btnWorkout = document.getElementById('btnWorkout');
     const btnRecipes = document.getElementById('btnRecipes');
 
-    const sectionPlan    = document.getElementById('sectionPlan');
+    const sectionPlan = document.getElementById('sectionPlan');
     const sectionWorkout = document.getElementById('sectionWorkout');
     const sectionRecipes = document.getElementById('sectionRecipes');
 
-    function show(tab) {
-      // esconde tudo
-      sectionPlan.classList.add('hidden');
+    btnPlan.addEventListener('click', () => {
+      sectionPlan.classList.remove('hidden');
       sectionWorkout.classList.add('hidden');
       sectionRecipes.classList.add('hidden');
-      btnPlan.classList.replace('bg-emerald-500','bg-emerald-100');
-      btnWorkout.classList.replace('bg-emerald-500','bg-emerald-100');
-      btnRecipes.classList.replace('bg-emerald-500','bg-emerald-100');
-      btnPlan.classList.replace('text-white','text-emerald-700');
-      btnWorkout.classList.replace('text-white','text-emerald-700');
-      btnRecipes.classList.replace('text-white','text-emerald-700');
+      btnPlan.classList.add('bg-emerald-500', 'text-white');
+      btnWorkout.classList.remove('bg-emerald-500', 'text-white');
+      btnRecipes.classList.remove('bg-emerald-500', 'text-white');
+    });
 
-      // mostra o seleccionado
-      if (tab === 'plan') {
-        sectionPlan.classList.remove('hidden');
-        btnPlan.classList.replace('bg-emerald-100','bg-emerald-500');
-        btnPlan.classList.replace('text-emerald-700','text-white');
-      } else if (tab === 'workout') {
-        sectionWorkout.classList.remove('hidden');
-        btnWorkout.classList.replace('bg-emerald-100','bg-emerald-500');
-        btnWorkout.classList.replace('text-emerald-700','text-white');
-      } else {
-        sectionRecipes.classList.remove('hidden');
-        btnRecipes.classList.replace('bg-emerald-100','bg-emerald-500');
-        btnRecipes.classList.replace('text-emerald-700','text-white');
-      }
-    }
+    btnWorkout.addEventListener('click', () => {
+      sectionPlan.classList.add('hidden');
+      sectionWorkout.classList.remove('hidden');
+      sectionRecipes.classList.add('hidden');
+      btnWorkout.classList.add('bg-emerald-500', 'text-white');
+      btnPlan.classList.remove('bg-emerald-500', 'text-white');
+      btnRecipes.classList.remove('bg-emerald-500', 'text-white');
+    });
 
-    btnPlan.addEventListener('click',    () => show('plan'));
-    btnWorkout.addEventListener('click', () => show('workout'));
-    btnRecipes.addEventListener('click', () => show('recipes'));
+    btnRecipes.addEventListener('click', () => {
+      sectionPlan.classList.add('hidden');
+      sectionWorkout.classList.add('hidden');
+      sectionRecipes.classList.remove('hidden');
+      btnRecipes.classList.add('bg-emerald-500', 'text-white');
+      btnWorkout.classList.remove('bg-emerald-500', 'text-white');
+      btnPlan.classList.remove('bg-emerald-500', 'text-white');
+    });
   </script>
 </body>
 </html>
