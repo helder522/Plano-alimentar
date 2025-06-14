@@ -1,5 +1,5 @@
-# Regerar o ficheiro index.html com o HTML completo da aplicação confirmada
-html_content_full = """
+# Gerar ficheiro index.html completo com plano semanal + várias receitas
+full_html = """
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -13,82 +13,136 @@ html_content_full = """
 </style>
 </head>
 <body class="bg-slate-50 py-4 px-3 text-slate-800">
-  <header class="text-center mb-6">
-    <h1 class="text-2xl font-bold">Plano Semanal de Refeições & Receitas Bimby®</h1>
-    <p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
-  </header>
+<header class="text-center mb-6">
+  <h1 class="text-2xl font-bold">Plano Semanal de Refeições & Receitas Bimby®</h1>
+  <p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
+</header>
 
-  <!-- Navegação -->
-  <nav class="flex mb-4 gap-2 justify-center">
-    <button id="btnPlan" class="tabbtn px-3 py-1 rounded-lg bg-emerald-500 text-white">Plano</button>
-    <button id="btnRecipes" class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700">Receitas</button>
-  </nav>
+<nav class="flex mb-4 gap-2 justify-center">
+  <button id="btnPlan" class="tabbtn px-3 py-1 rounded-lg bg-emerald-500 text-white">Plano</button>
+  <button id="btnRecipes" class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700">Receitas</button>
+</nav>
 
-  <!-- Plano semanal -->
-  <section id="sectionPlan" class="space-y-4">
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Segunda-feira</summary>
-      <ul class="list-disc list-inside mt-2">
-        <li><strong>PA</strong> – Smoothie verde (350 kcal)</li>
-        <li><strong>Almoço</strong> – Salmão 150 g + legumes 200 g + batata-doce 150 g</li>
-        <li><strong>Lanche</strong> – Iogurte grego 150 g + sementes 10 g</li>
-        <li><strong>Jantar</strong> – Creme legumes 300 ml + frango grelhado 150 g</li>
-      </ul>
-    </details>
-    <!-- ... outros dias omitidos por brevidade ... -->
-  </section>
+<section id="sectionPlan" class="space-y-4">
+  <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Segunda-feira</summary>
+    <ul class="list-disc list-inside mt-2">
+      <li><strong>PA</strong> – Smoothie verde (350 kcal)</li>
+      <li><strong>Almoço</strong> – Salmão 150g + legumes 200g + batata-doce 150g</li>
+      <li><strong>Lanche</strong> – Iogurte grego 150g + sementes 10g</li>
+      <li><strong>Jantar</strong> – Creme legumes 300ml + frango grelhado 150g</li>
+    </ul>
+  </details>
+  <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Terça-feira</summary>
+    <ul class="list-disc list-inside mt-2">
+      <li><strong>PA</strong> – Overnight oats (330 kcal)</li>
+      <li><strong>Almoço</strong> – Frango Varoma 150g + arroz integral colorido</li>
+      <li><strong>Lanche</strong> – Cenoura 100g + húmus 40g</li>
+      <li><strong>Jantar</strong> – Sopa legumes + feijão 100g + atum 120g</li>
+    </ul>
+  </details>
+  <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Quarta-feira</summary>
+    <ul class="list-disc list-inside mt-2">
+      <li><strong>PA</strong> – Omelete de claras + pão centeio</li>
+      <li><strong>Almoço</strong> – Salmão 150g + legumes 250g</li>
+      <li><strong>Lanche</strong> – Maçã 150g + frutos secos 15g</li>
+      <li><strong>Jantar</strong> – Frango Varoma + molho legumes + quinoa</li>
+    </ul>
+  </details>
+  <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Quinta-feira</summary>
+    <ul class="list-disc list-inside mt-2">
+      <li><strong>PA</strong> – Pão integral + ovos mexidos + tomate</li>
+      <li><strong>Almoço</strong> – Bowl peru desfiado + arroz de couve-flor</li>
+      <li><strong>Lanche</strong> – Smoothie frutos vermelhos</li>
+      <li><strong>Jantar</strong> – Creme de abóbora + pescada</li>
+    </ul>
+  </details>
+  <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Sexta-feira</summary>
+    <ul class="list-disc list-inside mt-2">
+      <li><strong>PA</strong> – 3 panquecas de aveia + mel</li>
+      <li><strong>Almoço</strong> – Frango Varoma + legumes + batata-doce</li>
+      <li><strong>Lanche</strong> – Iogurte magro + chia</li>
+      <li><strong>Jantar</strong> – Creme versátil + tofu</li>
+    </ul>
+  </details>
+  <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Sábado</summary>
+    <ul class="list-disc list-inside mt-2">
+      <li><strong>PA</strong> – Smoothie proteico</li>
+      <li><strong>Almoço</strong> – Salmão + cuscuz + legumes</li>
+      <li><strong>Lanche</strong> – Pepino + pasta de atum</li>
+      <li><strong>Jantar</strong> – Chili de peru</li>
+    </ul>
+  </details>
+  <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Domingo</summary>
+    <ul class="list-disc list-inside mt-2">
+      <li><strong>PA</strong> – Pudim de chia (~250g)</li>
+      <li><strong>Almoço</strong> – Camarão + arroz de couve-flor + legumes</li>
+      <li><strong>Lanche</strong> – Tangerinas + amêndoas</li>
+      <li><strong>Jantar</strong> – Creme de legumes + ovos escalfados</li>
+    </ul>
+  </details>
+</section>
 
-  <!-- Receitas -->
-  <section id="sectionRecipes" class="hidden">
-    <p class="text-sm mb-3 text-slate-600">Toque em cada receita para ver ingredientes e modo de preparação.</p>
-    <details class="rounded-xl bg-white p-4 shadow mb-3">
-      <summary class="font-semibold text-emerald-700">Smoothie Verde (1 copo ≈350 kcal)</summary>
-      <h4 class="font-semibold mt-2">Ingredientes</h4>
-      <ul class="list-disc list-inside text-sm">
-        <li>200 ml água</li>
-        <li>1 banana</li>
-        <li>1 punhado espinafres</li>
-        <li>20 g aveia</li>
-        <li>10 g manteiga de amendoim</li>
-      </ul>
-      <h4 class="font-semibold mt-2">Modo de preparação</h4>
-      <p class="text-sm">Triturar 1 min/vel 10 e servir.</p>
-    </details>
-  </section>
+<section id="sectionRecipes" class="hidden">
+  <p class="text-sm mb-3 text-slate-600">Toque em cada receita para ver ingredientes e modo de preparação.</p>
+
+  <details class="rounded-xl bg-white p-4 shadow mb-3">
+    <summary class="font-semibold text-emerald-700">Smoothie Verde</summary>
+    <p><strong>Ingredientes:</strong> 200ml água, 1 banana, espinafres, 20g aveia, 10g manteiga de amendoim.</p>
+    <p><strong>Preparo:</strong> Triturar 1 min/vel 10.</p>
+  </details>
+
+  <details class="rounded-xl bg-white p-4 shadow mb-3">
+    <summary class="font-semibold text-emerald-700">Panquecas de Aveia</summary>
+    <p><strong>Ingredientes:</strong> 40g aveia, 1 ovo, ½ banana, 50ml claras.</p>
+    <p><strong>Preparo:</strong> Triturar e cozinhar 3 panquecas.</p>
+  </details>
+
+  <details class="rounded-xl bg-white p-4 shadow mb-3">
+    <summary class="font-semibold text-emerald-700">Pudim de Chia</summary>
+    <p><strong>Ingredientes:</strong> 25g chia, 200ml leite, baunilha.</p>
+    <p><strong>Preparo:</strong> Misturar e refrigerar 4h.</p>
+  </details>
+
+  <details class="rounded-xl bg-white p-4 shadow mb-3">
+    <summary class="font-semibold text-emerald-700">Chili de Peru</summary>
+    <p><strong>Ingredientes:</strong> 150g peru, 150g feijão, 50g tomate, especiarias.</p>
+    <p><strong>Preparo:</strong> Refogar e cozinhar tudo 15min.</p>
+  </details>
+</section>
 
 <script>
-  const btnPlan = document.getElementById('btnPlan');
-  const btnRecipes = document.getElementById('btnRecipes');
-  const sectionPlan = document.getElementById('sectionPlan');
-  const sectionRecipes = document.getElementById('sectionRecipes');
+const btnPlan = document.getElementById('btnPlan');
+const btnRecipes = document.getElementById('btnRecipes');
+const sectionPlan = document.getElementById('sectionPlan');
+const sectionRecipes = document.getElementById('sectionRecipes');
 
-  function activate(tab) {
-    if (tab === 'plan') {
-      sectionPlan.classList.remove('hidden');
-      sectionRecipes.classList.add('hidden');
-      btnPlan.classList.replace('bg-emerald-100','bg-emerald-500');
-      btnPlan.classList.replace('text-emerald-700','text-white');
-      btnRecipes.classList.replace('bg-emerald-500','bg-emerald-100');
-      btnRecipes.classList.replace('text-white','text-emerald-700');
-    } else {
-      sectionRecipes.classList.remove('hidden');
-      sectionPlan.classList.add('hidden');
-      btnRecipes.classList.replace('bg-emerald-100','bg-emerald-500');
-      btnRecipes.classList.replace('text-emerald-700','text-white');
-      btnPlan.classList.replace('bg-emerald-500','bg-emerald-100');
-      btnPlan.classList.replace('text-white','text-emerald-700');
-    }
+function activate(tab) {
+  if (tab === 'plan') {
+    sectionPlan.classList.remove('hidden');
+    sectionRecipes.classList.add('hidden');
+    btnPlan.classList.replace('bg-emerald-100','bg-emerald-500');
+    btnPlan.classList.replace('text-emerald-700','text-white');
+    btnRecipes.classList.replace('bg-emerald-500','bg-emerald-100');
+    btnRecipes.classList.replace('text-white','text-emerald-700');
+  } else {
+    sectionRecipes.classList.remove('hidden');
+    sectionPlan.classList.add('hidden');
+    btnRecipes.classList.replace('bg-emerald-100','bg-emerald-500');
+    btnRecipes.classList.replace('text-emerald-700','text-white');
+    btnPlan.classList.replace('bg-emerald-500','bg-emerald-100');
+    btnPlan.classList.replace('text-white','text-emerald-700');
   }
-
-  btnPlan.addEventListener('click', () => activate('plan'));
-  btnRecipes.addEventListener('click', () => activate('recipes'));
+}
+btnPlan.addEventListener('click', () => activate('plan'));
+btnRecipes.addEventListener('click', () => activate('recipes'));
 </script>
 </body>
 </html>
 """
 
-file_index = "/mnt/data/index.html"
-with open(file_index, "w", encoding="utf-8") as f:
-    f.write(html_content_full)
+# Save it to index.html
+final_index_path = "/mnt/data/index.html"
+with open(final_index_path, "w", encoding="utf-8") as f:
+    f.write(full_html)
 
-file_index
+final_index_path
