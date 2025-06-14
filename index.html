@@ -1,117 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plano Semanal, Receitas & Treino</title>
+  <title>Plano Semanal • Receitas • Treino</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: system-ui, sans-serif; }
-    details > summary { cursor: pointer; }
+    body{font-family:system-ui,sans-serif}
+    details>summary{cursor:pointer}
+    img{max-width:100%;border-radius:0.5rem;margin-top:0.5rem}
   </style>
 </head>
 <body class="bg-slate-50 py-4 px-3 text-slate-800">
   <header class="text-center mb-6">
-    <h1 class="text-2xl font-bold">Plano Semanal de Refeições & Receitas Bimby®</h1>
-    <p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
+    <h1 class="text-2xl font-bold">Plano Semanal de Refeições, Receitas & Treino</h1>
+    <p class="text-sm text-slate-600">Versão mobile — ~1650 kcal/dia</p>
   </header>
-  <nav class="flex mb-4 gap-2 justify-center">
-    <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-500 text-white" id="btnPlan">Plano</button>
-    <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnWorkout">Treino</button>
-    <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnRecipes">Receitas</button>
+
+  <!-- Navegação -->
+  <nav class="flex gap-2 justify-center mb-4">
+    <button id="btnPlan"    class="px-3 py-1 rounded-lg bg-emerald-500 text-white">Plano</button>
+    <button id="btnWorkout" class="px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700">Treino</button>
+    <button id="btnRecipes" class="px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700">Receitas</button>
   </nav>
 
-  <!-- Seção Plano -->
-  <section class="space-y-4" id="sectionPlan">
-    <!-- Colar aqui os <details> de cada dia da semana como estavam -->
+  <!-- ===================== PLANO SEMANAL ====================== -->
+  <section id="sectionPlan" class="space-y-4">
+    <!-- Segunda -->
+    <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Segunda‑feira</summary><ul class="list-disc list-inside mt-2 text-sm space-y-1">
+      <li><strong>PA</strong> – Smoothie verde (350 kcal)</li>
+      <li><strong>Almoço</strong> – Salmão 150 g + legumes 200 g + batata‑doce 150 g</li>
+      <li><strong>Lanche</strong> – Iogurte grego 150 g + sementes 10 g</li>
+      <li><strong>Jantar</strong> – Creme legumes 300 ml + frango grelhado 150 g</li>
+    </ul></details>
+    <!-- Terça -->
+    <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Terça‑feira</summary><ul class="list-disc list-inside mt-2 text-sm space-y-1">
+      <li><strong>PA</strong> – Overnight oats (330 kcal)</li>
+      <li><strong>Almoço</strong> – Frango Varoma 150 g + arroz integral colorido</li>
+      <li><strong>Lanche</strong> – Cenoura 100 g + húmus 40 g</li>
+      <li><strong>Jantar</strong> – Sopa legumes + feijão 100 g + atum 120 g</li>
+    </ul></details>
+    <!-- Quarta -->
+    <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Quarta‑feira</summary><ul class="list-disc list-inside mt-2 text-sm space-y-1">
+      <li><strong>PA</strong> – Omelete claras + pão centeio</li>
+      <li><strong>Almoço</strong> – Salmão 150 g + legumes 250 g</li>
+      <li><strong>Lanche</strong> – Maçã 150 g + frutos secos 15 g</li>
+      <li><strong>Jantar</strong> – Frango Varoma + molho legumes + quinoa</li>
+    </ul></details>
+    <!-- Quinta -->
+    <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Quinta‑feira</summary><ul class="list-disc list-inside mt-2 text-sm space-y-1">
+      <li><strong>PA</strong> – Pão integral + ovos mexidos + tomate</li>
+      <li><strong>Almoço</strong> – Bowl peru desfiado + arroz couve‑flor</li>
+      <li><strong>Lanche</strong> – Smoothie frutos vermelhos</li>
+      <li><strong>Jantar</strong> – Creme abóbora + pescada</li>
+    </ul></details>
+    <!-- Sexta -->
+    <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Sexta‑feira</summary><ul class="list-disc list-inside mt-2 text-sm space-y-1">
+      <li><strong>PA</strong> – 3 panquecas aveia + mel</li>
+      <li><strong>Almoço</strong> – Frango Varoma + legumes 200 g + batata‑doce 150 g</li>
+      <li><strong>Lanche</strong> – Iogurte magro 150 g + chia 10 g</li>
+      <li><strong>Jantar</strong> – Creme versátil + tofu 120 g</li>
+    </ul></details>
+    <!-- Sábado -->
+    <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Sábado</summary><ul class="list-disc list-inside mt-2 text-sm space-y-1">
+      <li><strong>PA</strong> – Smoothie proteico</li>
+      <li><strong>Almoço</strong> – Salmão 150 g + cuscuz 60 g + legumes 150 g</li>
+      <li><strong>Lanche</strong> – Pepino 100 g + pasta atum 40 g</li>
+      <li><strong>Jantar</strong> – Chili peru 350 g</li>
+    </ul></details>
+    <!-- Domingo -->
+    <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Domingo</summary><ul class="list-disc list-inside mt-2 text-sm space-y-1">
+      <li><strong>PA</strong> – Pudim chia 250 g</li>
+      <li><strong>Almoço</strong> – Camarão 150 g + arroz couve‑flor 200 g + legumes 150 g</li>
+      <li><strong>Lanche</strong> – Tangerinas 200 g + amêndoas 10 g</li>
+      <li><strong>Jantar</strong> – Creme legumes 300 ml + 2 ovos escalfados</li>
+    </ul></details>
   </section>
 
-  <!-- Seção Receitas -->
-  <section class="hidden" id="sectionRecipes">
-    <!-- Colar aqui os <details> de cada receita como estavam -->
-  </section>
+  <!-- ===================== TREINO ====================== -->
+  <section id="sectionWorkout" class="hidden space-y-4">
+    <p class="text-sm text-slate-600 mb-2">Plano de treino com imagens (repositório GitHub).</p>
 
-  <!-- Seção Treino -->
-  <section class="hidden space-y-4" id="sectionWorkout">
-    <p class="text-sm mb-3 text-slate-600">Plano de treino com imagens por exercício.</p>
+    <!-- Segunda‑feira -->
     <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Abdominais na bicicleta</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/abdominais_bicicleta.jpg" alt="Abdominais na bicicleta" class="my-2 rounded" />
-      <p>3 a 4 séries de 15 a 20 repetições.</p>
+      <summary class="font-semibold text-emerald-700">Segunda — Full‑Body Força</summary>
+      <ul class="list-disc list-inside mt-2 text-sm space-y-2">
+        <li>
+          <strong>Agachamento com halteres</strong> (3‑4×12)
+          <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/agachamento.jpg" alt="Agachamento"/>
+        </li>
+        <li>
+          <strong>Supino na Multigym</strong> (3‑4×12)
+          <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/supino.jpg" alt="Supino"/>
+        </li>
+        <li>
+          <strong>Remada baixa</strong> (3‑4×12)
+          <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/remada.jpg" alt="Remada"/>
+        </li>
+        <li>
+          <strong>Elevação de pernas</strong> (3×15)
+          <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/elevacao_pernas.jpg" alt="Elevação de pernas"/>
+        </li>
+        <li>
+          <strong>Bíceps curl</strong> (3×12)
+          <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/biceps.jpg" alt="Bíceps curl"/>
+        </li>
+      </ul>
     </details>
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Afundos</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/afundos.jpg" alt="Afundos" class="my-2 rounded" />
-      <p>3 séries de 10 repetições por perna.</p>
-    </details>
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Agachamento</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/agachamento.jpg" alt="Agachamento" class="my-2 rounded" />
-      <p>4 séries de 12 a 15 repetições.</p>
-    </details>
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Bíceps com halteres</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/biceps.jpg" alt="Bíceps" class="my-2 rounded" />
-      <p>3 séries de 12 repetições.</p>
-    </details>
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Bicicleta estática</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/bicicleta_estatica.jpg" alt="Bicicleta" class="my-2 rounded" />
-      <p>15 a 30 minutos de cardio.</p>
-    </details>
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Elevação de pernas</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/elevacao_pernas.jpg" alt="Elevação de pernas" class="my-2 rounded" />
-      <p>3 a 4 séries de 12 repetições.</p>
-    </details>
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Extensão de pernas</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/extensao_pernas.jpg" alt="Extensão de pernas" class="my-2 rounded" />
-      <p>3 séries de 15 repetições.</p>
-    </details>
-    <details class="rounded-xl bg-white p-4 shadow">
-      <summary class="font-semibold">Flexões</summary>
-      <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/flexoes.jpg" alt="Flexões" class="my-2 rounded" />
-      <p>3 séries de 10 a 15 repetições.</p>
-    </details>
-    <!-- Repetir com os restantes exercícios -->
-  </section>
 
-  <script>
-    const btnPlan = document.getElementById('btnPlan');
-    const btnWorkout = document.getElementById('btnWorkout');
-    const btnRecipes = document.getElementById('btnRecipes');
-
-    const sectionPlan = document.getElementById('sectionPlan');
-    const sectionWorkout = document.getElementById('sectionWorkout');
-    const sectionRecipes = document.getElementById('sectionRecipes');
-
-    btnPlan.addEventListener('click', () => {
-      sectionPlan.classList.remove('hidden');
-      sectionWorkout.classList.add('hidden');
-      sectionRecipes.classList.add('hidden');
-      btnPlan.classList.add('bg-emerald-500', 'text-white');
-      btnWorkout.classList.remove('bg-emerald-500', 'text-white');
-      btnRecipes.classList.remove('bg-emerald-500', 'text-white');
-    });
-
-    btnWorkout.addEventListener('click', () => {
-      sectionPlan.classList.add('hidden');
-      sectionWorkout.classList.remove('hidden');
-      sectionRecipes.classList.add('hidden');
-      btnWorkout.classList.add('bg-emerald-500', 'text-white');
-      btnPlan.classList.remove('bg-emerald-500', 'text-white');
-      btnRecipes.classList.remove('bg-emerald-500', 'text-white');
-    });
-
-    btnRecipes.addEventListener('click', () => {
-      sectionPlan.classList.add('hidden');
-      sectionWorkout.classList.add('hidden');
-      sectionRecipes.classList.remove('hidden');
-      btnRecipes.classList.add('bg-emerald-500', 'text-white');
-      btnWorkout.classList.remove('bg-emerald-500', 'text-white');
-      btnPlan.classList.remove('bg-emerald-500', 'text-white');
-    });
-  </script>
-</body>
-</html>
+    <!-- Terça‑feira -->
+    <details class="rounded-xl bg-white p-4 shadow">
+      <summary class="font-semibold text-emerald-700">Terça — HIIT Bicicleta + Corpo</summary>
+      <ul class="list-disc list-inside mt-2 text-sm space-y-2">
+        <li>
+          <strong>Sprint bicicleta</strong> (2 min)
+          <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/sprint_bicicleta.jpg" alt="Sprint bicicleta"/>
+        </li>
+        <li>
+          <strong>Agachamento rápido</strong> (1 min)
+          <img src="https://raw.githubusercontent.com/helder522/Plano-alimentar/main/agachamento.jpg" alt="Agachamentos rápidos"/>
+        </li>
+        <li>
+          <strong>Flexões</strong> (1 min)
+          <img src="https://raw.githubusercontent.com/helder522
