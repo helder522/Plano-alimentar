@@ -16,7 +16,6 @@
 <h1 class="text-2xl font-bold">Plano Semanal de Refeições &amp; Receitas Bimby®</h1>
 <p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
 </header>
-<section class="space-y-4" id="sectionPlan">
 <!-- Plano dos 7 dias -->
 <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Segunda-feira</summary><ul class="list-disc list-inside mt-2">
 <li><strong>PA</strong> – Smoothie verde (350 kcal)</li>
@@ -295,7 +294,7 @@ btnPlan.addEventListener('click', () => {
 });
 
 btnWorkout.addEventListener('click', () => {
-  sectionPlan.classList.add('hidden');
+  .classList.add('hidden');
   sectionWorkout.classList.remove('hidden');
   sectionRecipes.classList.add('hidden');
   btnWorkout.classList.add('bg-emerald-500', 'text-white');
@@ -304,7 +303,7 @@ btnWorkout.addEventListener('click', () => {
 });
 
 btnRecipes.addEventListener('click', () => {
-  sectionPlan.classList.add('hidden');
+  .classList.add('hidden');
   sectionWorkout.classList.add('hidden');
   sectionRecipes.classList.remove('hidden');
   btnRecipes.classList.add('bg-emerald-500', 'text-white');
