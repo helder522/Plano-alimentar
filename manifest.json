@@ -1,17 +1,11 @@
 {
-  "name": "Plano Semanal & Bimby",
-  "short_name": "Plano Bimby",
+  "name": "Helder Workout",
+  "short_name": "Workout",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f1f5f9",
   "theme_color": "#10b981",
-  "orientation": "portrait",
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
