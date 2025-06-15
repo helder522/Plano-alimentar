@@ -134,6 +134,12 @@
     <p class="mt-2">Recuperação: hidratação, sono e alimentação equilibrada.</p>
   </details>
 </section>
+ <section id="sectionUsers" class="hidden space-y-4 px-4">
+  <h2 class="text-xl font-bold">Gestão de Utilizadores</h2>
+  <div id="userForms" class="space-y-4"></div>
+  <button id="addUser" class="px-3 py-1 bg-emerald-500 text-white rounded">Adicionar Utilizador</button>
+  <div id="userHistory" class="mt-6"></div>
+</section>   
 <!-- Secção Receitas... -->
     
 <section class="hidden" id="sectionRecipes">
@@ -320,16 +326,8 @@ btnRecipes.addEventListener('click', () => {
   btnPlan.classList.remove('bg-emerald-500', 'text-white');
   btnUsers.classList.remove('bg-emerald-500', 'text-white');
 });
-
-// Novo evento para "Utilizadores"
-<section id="sectionUsers" class="hidden space-y-4 px-4">
-  <h2 class="text-xl font-bold">Gestão de Utilizadores</h2>
-  <div id="userForms" class="space-y-4"></div>
-  <button id="addUser" class="px-3 py-1 bg-emerald-500 text-white rounded">Adicionar Utilizador</button>
-  <div id="userHistory" class="mt-6"></div>
-</section>
-
 <script>
+// Novo evento para "Utilizadores"
 const btnUsers = document.getElementById('btnUsers');
 const sectionUsers = document.getElementById('sectionUsers');
 
