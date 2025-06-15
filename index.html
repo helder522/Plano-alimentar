@@ -69,75 +69,89 @@
 <li><strong>Jantar</strong> – Creme de legumes + ovos escalfados</li>
 </ul></details>
 </section>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    body { font-family: system-ui, sans-serif; }
+    details > summary { cursor: pointer; }
+</style>
+</head>
+<body class="bg-slate-50 py-4 px-3 text-slate-800">
+<header class="text-center mb-6">
+<h1 class="text-2xl font-bold">Plano Semanal de Refeições &amp; Receitas Bimby®</h1>
+<p class="text-sm text-slate-600">Versão mobile — calorias ~1 650 kcal/dia</p>
+</header>
+<nav class="flex mb-4 gap-2 justify-center">
+<button class="tabbtn px-3 py-1 rounded-lg bg-emerald-500 text-white" id="btnPlan">Plano</button>
+<button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnWorkout">Treino</button>
+<button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnRecipes">Receitas</button>
+</nav>
+<section class="space-y-4" id="sectionPlan">
+<!-- Plano dos 7 dias -->
+<!-- ... plano semanal ... -->
+</section>
 <!-- Secção de Treino -->
 <section class="hidden space-y-4" id="sectionWorkout">
   <details class="rounded-xl bg-white p-4 shadow">
     <summary class="font-semibold">Segunda-feira – Full Body (Força)</summary>
     <div class="mt-2 space-y-4">
       <div><strong>Aquecimento:</strong> 5 minutos de bicicleta leve.</div>
-      <div class="flex gap-3 items-start"><img src="./agachamento.jpg" class="w-24 rounded" alt="Agachamento"/><div><strong>Agachamento com Halteres</strong><br>3–4x12 rep. <br><small>Costas direitas, coxas paralelas ao chão.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./supino.jpg" class="w-24 rounded" alt="Supino"/><div><strong>Supino na Multigym</strong><br>3–4x12 rep. <br><small>Empurrar até estender os braços, sem travar cotovelos.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./remada.jpg" class="w-24 rounded" alt="Remada"/><div><strong>Remada Baixa</strong><br>3–4x12 rep. <br><small>Puxar até à barriga, com ombros para trás.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./elevacao_pernas.jpg" class="w-24 rounded" alt="Elevação de Pernas"/><div><strong>Elevação de Pernas no Chão</strong><br>3x15 rep. <br><small>Levantar até 90°, sem arquear as costas.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./biceps.jpg" class="w-24 rounded" alt="Bíceps"/><div><strong>Bíceps Curl com Halteres</strong><br>3x12 por braço. <br><small>Cotovelos fixos junto ao corpo.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./agachamento_halteres.png" class="w-24 rounded" alt="Agachamento com Halteres"/><div><strong>Agachamento com Halteres</strong><br>3–4x12 rep. <br><small>Costas direitas, coxas paralelas ao chão.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./supino_multigym.png" class="w-24 rounded" alt="Supino"/><div><strong>Supino na Multigym</strong><br>3–4x12 rep. <br><small>Empurrar até estender os braços, sem travar cotovelos.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./remada_baixa.png" class="w-24 rounded" alt="Remada"/><div><strong>Remada Baixa</strong><br>3–4x12 rep. <br><small>Puxar até à barriga, com ombros para trás.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./elevacao_pernas.png" class="w-24 rounded" alt="Elevação de Pernas"/><div><strong>Elevação de Pernas no Chão</strong><br>3x15 rep. <br><small>Levantar até 90°, sem arquear as costas.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./biceps_curl.png" class="w-24 rounded" alt="Bíceps"/><div><strong>Bíceps Curl com Halteres</strong><br>3x12 por braço. <br><small>Cotovelos fixos junto ao corpo.</small></div></div>
     </div>
   </details>
-
   <details class="rounded-xl bg-white p-4 shadow">
     <summary class="font-semibold">Terça-feira – HIIT + Peso Corporal</summary>
     <div class="mt-2 space-y-4 text-sm">
       <p>4 ciclos de 5 minutos:</p>
       <ul class="list-decimal list-inside space-y-1">
         <li><strong>Sprint na Bicicleta:</strong> 2 min intensos (nível 7+)</li>
-        <li><strong>Agachamentos Rápidos:</strong> 1 min ritmo alto</li>
-        <li><strong>Flexões:</strong> 1 min (ajoelhado se necessário)</li>
+        <li><img src="./agachamento_rapido.png" class="w-24 inline-block mr-2"/> <strong>Agachamentos Rápidos:</strong> 1 min ritmo alto</li>
+        <li><img src="./flexoes.png" class="w-24 inline-block mr-2"/> <strong>Flexões:</strong> 1 min (ajoelhado se necessário)</li>
         <li><strong>Descanso:</strong> 1 min</li>
       </ul>
       <p>Final: Alongamentos e respiração controlada.</p>
     </div>
   </details>
-
   <details class="rounded-xl bg-white p-4 shadow">
     <summary class="font-semibold">Quarta-feira – Parte Superior</summary>
     <div class="mt-2 space-y-4">
-      <div class="flex gap-3 items-start"><img src="./pulldown.jpg" class="w-24 rounded" alt="Pulldown"/><div><strong>Puxada Frontal</strong><br>3x12 rep. <br><small>Descer a barra até ao peito, cotovelos para baixo.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./ombros.jpg" class="w-24 rounded" alt="Elevação Lateral"/><div><strong>Elevação Lateral com Halteres</strong><br>3x10 rep. <br><small>Levantar até à altura dos ombros.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./peckdeck.jpg" class="w-24 rounded" alt="Peck Deck"/><div><strong>Peck Deck</strong><br>3x12 rep. <br><small>Movimento de abraço, com controlo.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./triceps_pushdown.jpg" class="w-24 rounded" alt="Pushdown"/><div><strong>Tríceps Pushdown</strong><br>3x12 rep. <br><small>Cotovelos junto ao tronco, estender até abaixo.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./biceps.jpg" class="w-24 rounded" alt="Bíceps Alternado"/><div><strong>Bíceps Alternado</strong><br>3x10 por braço. <br><small>Alternar braços mantendo postura.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./puxada_frontal.png" class="w-24 rounded" alt="Pulldown"/><div><strong>Puxada Frontal</strong><br>3x12 rep. <br><small>Descer a barra até ao peito, cotovelos para baixo.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./elevacao_lateral.png" class="w-24 rounded" alt="Elevação Lateral"/><div><strong>Elevação Lateral com Halteres</strong><br>3x10 rep. <br><small>Levantar até à altura dos ombros.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./peck_deck.png" class="w-24 rounded" alt="Peck Deck"/><div><strong>Peck Deck</strong><br>3x12 rep. <br><small>Movimento de abraço, com controlo.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./triceps_pushdown.png" class="w-24 rounded" alt="Pushdown"/><div><strong>Tríceps Pushdown</strong><br>3x12 rep. <br><small>Cotovelos junto ao tronco, estender até abaixo.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./biceps_alternado.png" class="w-24 rounded" alt="Bíceps Alternado"/><div><strong>Bíceps Alternado</strong><br>3x10 por braço. <br><small>Alternar braços mantendo postura.</small></div></div>
     </div>
   </details>
-
   <details class="rounded-xl bg-white p-4 shadow">
     <summary class="font-semibold">Quinta-feira – Cardio Contínuo</summary>
     <div class="mt-2">
-      <img src="./bicicleta_estatica.jpg" class="w-24 float-left mr-4 rounded" alt="Cardio Bicicleta"/>
       <p>45 min de bicicleta fixa a ritmo moderado.<br><small>Manter zona 2, respiração nasal sempre que possível.</small></p>
     </div>
   </details>
-
   <details class="rounded-xl bg-white p-4 shadow">
     <summary class="font-semibold">Sexta-feira – Pernas + Core</summary>
     <div class="mt-2 space-y-4">
-      <img src="./lunges.jpg" class="w-24 rounded" alt="Avanços com Halteres"/><div><strong>Avanços com Halteres</strong><br>3x12 por perna.<br><small>Manter o tronco direito, joelho da frente a 90°.</small></div>
-
-      <div class="flex gap-3 items-start"><img src="./peso_morto.jpg" class="w-24 rounded" alt="Peso Morto"/><div><strong>Peso Morto com Halteres</strong><br>3x10 rep. <br><small>Descer halteres até meio da canela.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./extensao_pernas.jpg" class="w-24 rounded" alt="Extensão de Pernas"/><div><strong>Extensão de Pernas</strong><br>3x12 rep. <br><small>Subir até extensão total, sem travar articulações.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./prancha.jpg" class="w-24 rounded" alt="Prancha"/><div><strong>Prancha</strong><br>3x30–45 seg. <br><small>Corpo alinhado, abdómen contraído.</small></div></div>
-      <div class="flex gap-3 items-start"><img src="./abdominais_bicicleta.jpg" class="w-24 rounded" alt="Abdominal Bicicleta"/><div><strong>Abdominal Bicicleta</strong><br>3x20 rep. <br><small>Cotovelos cruzam até o joelho oposto.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./avancos_halteres.png" class="w-24 rounded" alt="Avanços com Halteres"/><div><strong>Avanços com Halteres</strong><br>3x12 por perna. <br><small>Manter tronco ereto e passo largo.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./peso_morto.png" class="w-24 rounded" alt="Peso Morto"/><div><strong>Peso Morto com Halteres</strong><br>3x10 rep. <br><small>Descer halteres até meio da canela.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./extensao_pernas.png" class="w-24 rounded" alt="Extensão de Pernas"/><div><strong>Extensão de Pernas</strong><br>3x12 rep. <br><small>Subir até extensão total, sem travar articulações.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./prancha.png" class="w-24 rounded" alt="Prancha"/><div><strong>Prancha</strong><br>3x30–45 seg. <br><small>Corpo alinhado, abdómen contraído.</small></div></div>
+      <div class="flex gap-3 items-start"><img src="./abdominais_bicicleta.png" class="w-24 rounded" alt="Abdominal Bicicleta"/><div><strong>Abdominal Bicicleta</strong><br>3x20 rep. <br><small>Cotovelos cruzam até o joelho oposto.</small></div></div>
     </div>
   </details>
-
   <details class="rounded-xl bg-white p-4 shadow">
     <summary class="font-semibold">Sábado – Atividade Leve</summary>
     <p class="mt-2">Caminhada 30–60 min ou sessão leve de alongamentos.</p>
   </details>
-
   <details class="rounded-xl bg-white p-4 shadow">
     <summary class="font-semibold">Domingo – Descanso</summary>
     <p class="mt-2">Recuperação: hidratação, sono e alimentação equilibrada.</p>
   </details>
-</section>    
+</section>
+<!-- Secção Receitas... -->
+    
 <section class="hidden" id="sectionRecipes">
 <p class="text-sm mb-3 text-slate-600">Toque em cada receita para ver ingredientes e modo de preparação.</p>
 <details class="rounded-xl bg-white p-4 shadow mb-3">
