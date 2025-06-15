@@ -400,4 +400,97 @@ document.querySelectorAll('.calculate-btn').forEach((btn) => {
     calcularIMC(nome, peso, altura, resultados);
   });
 });
+<!-- Secção de Usuários -->
+<section class="hidden space-y-4" id="sectionUsers">
+  <h2 class="text-xl font-bold">Gestão de Usuários</h2>
+  <div id="userForms" class="space-y-4"></div>
+  <button id="addUser" class="px-3 py-1 bg-emerald-500 text-white rounded">Adicionar Usuário</button>
+  <div id="userHistory" class="mt-6"></div>
+</section>
+
+<script>
+const btnUsers = document.getElementById('btnUsers');
+const sectionUsers = document.getElementById('sectionUsers');
+
+btnUsers.addEventListener('click', () => {
+  sectionPlan.classList.add('hidden');
+  sectionWorkout.classList.add('hidden');
+  sectionRecipes.classList.add('hidden');
+  sectionUsers.classList.remove('hidden');
+
+  btnUsers.classList.add('bg-emerald-500', 'text-white');
+  btnPlan.classList.remove('bg-emerald-500', 'text-white');
+  btnWorkout.classList.remove('bg-emerald-500', 'text-white');
+  btnRecipes.classList.remove('bg-emerald-500', 'text-white');
+
+  renderUsers();
+  renderHistory();
+});
+
+const userForms = document.getElementById('userForms');
+const userHistory = document.getElementById('userHistory');
+const addUserBtn = document.getElementById('addUser');
+
+let users = JSON.parse(localStorage.getItem('users')) || [];
+let history = JSON.parse(localStorage.getItem('history')) || {};
+
+function saveData() {
+  localStorage.setItem('users', JSON.stringify(users));
+  localStorage.setItem('history', JSON.stringify(history));
+}
+
+function renderUsers() {
+  userForms.innerHTML = '';
+  users.forEach((user, index) => {
+    const div = document.createElement('div');
+    div.className = "p-4 bg-white rounded shadow";
+    div.innerHTML = `
+      <input type="text" value="${user.nome}" placeholder="Nome" class="border p-1 mr-2" onchange="updateUser(${index}, 'nome', this.value)">
+      <input type="number" value="${user.peso}" placeholder="Peso (kg)" class="border p-1 mr-2" onchange="updateUser(${index}, 'peso', this.value)">
+      <input type="number" value="${user.altura}" placeholder="Altura (cm)" class="border p-1 mr-2" onchange="updateUser(${index}, 'altura', this.value)">
+      <button onclick="registarIMC(${index})" class="bg-emerald-600 text-white px-2 py-1 rounded">Registar IMC</button>
+    `;
+    userForms.appendChild(div);
+  });
+}
+
+function updateUser(index, campo, valor) {
+  users[index][campo] = valor;
+  saveData();
+}
+
+function registarIMC(index) {
+  const u = users[index];
+  const alturaM = u.altura / 100;
+  const imc = (u.peso / (alturaM * alturaM)).toFixed(2);
+  const hoje = new Date().toISOString().split('T')[0];
+  if (!history[hoje]) history[hoje] = [];
+  history[hoje].push({ nome: u.nome, peso: u.peso, imc });
+  saveData();
+  renderHistory();
+}
+
+function renderHistory() {
+  userHistory.innerHTML = '<h3 class="text-lg font-semibold">Histórico de IMC</h3>';
+  for (const dia in history) {
+    const div = document.createElement('div');
+    div.className = "bg-slate-100 p-3 mt-2 rounded";
+    div.innerHTML = `<strong>${dia}</strong><ul>${history[dia].map(e => `<li>${e.nome}: ${e.peso} kg, IMC ${e.imc}</li>`).join('')}</ul><button onclick="apagarRegisto('${dia}')" class="text-sm text-red-600 mt-1">Apagar</button>`;
+    userHistory.appendChild(div);
+  }
+}
+
+function apagarRegisto(dia) {
+  delete history[dia];
+  saveData();
+  renderHistory();
+}
+
+addUserBtn.addEventListener('click', () => {
+  if (users.length >= 4) return alert("Máximo de 4 usuários atingido.");
+  users.push({ nome: '', peso: '', altura: '' });
+  saveData();
+  renderUsers();
+});
 </script>
+
