@@ -322,6 +322,13 @@ btnRecipes.addEventListener('click', () => {
 });
 
 // Novo evento para "Utilizadores"
+<section id="sectionUsers" class="hidden space-y-4 px-4">
+  <h2 class="text-xl font-bold">Gestão de Utilizadores</h2>
+  <div id="userForms" class="space-y-4"></div>
+  <button id="addUser" class="px-3 py-1 bg-emerald-500 text-white rounded">Adicionar Utilizador</button>
+  <div id="userHistory" class="mt-6"></div>
+</section>
+
 <script>
 const btnUsers = document.getElementById('btnUsers');
 const sectionUsers = document.getElementById('sectionUsers');
@@ -407,11 +414,5 @@ addUserBtn.addEventListener('click', () => {
   renderUsers();
 });
 </script>
-<section id="sectionUsers" class="hidden space-y-4 px-4">
-  <h2 class="text-xl font-bold">Gestão de Usuários</h2>
-  <div id="userForms" class="space-y-4"></div>
-  <button id="addUser" class="px-3 py-1 bg-emerald-500 text-white rounded">Adicionar Usuário</button>
-  <div id="userHistory" class="mt-6"></div>
-</section>
 </body>
 </html>
