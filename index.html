@@ -27,7 +27,7 @@
 <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-500 text-white" id="btnPlan">Plano</button>
 <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnWorkout">Treino</button>
 <button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnRecipes">Receitas</button>
-<button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnUsers">Usuários</button>    
+<button class="tabbtn px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700" id="btnUsers">Utilizadores</button>    
 </nav>
  <section class="space-y-4" id="sectionPlan">
 <details class="rounded-xl bg-white p-4 shadow"><summary class="font-semibold">Segunda-feira</summary><ul class="list-disc list-inside mt-2">
@@ -321,7 +321,7 @@ btnRecipes.addEventListener('click', () => {
   btnUsers.classList.remove('bg-emerald-500', 'text-white');
 });
 
-// Novo evento para "Usuários"
+// Novo evento para "Utilizadores"
 <script>
 const btnUsers = document.getElementById('btnUsers');
 const sectionUsers = document.getElementById('sectionUsers');
@@ -401,9 +401,17 @@ function apagarRegisto(dia) {
 }
 
 addUserBtn.addEventListener('click', () => {
-  if (users.length >= 4) return alert("Máximo de 4 usuários atingido.");
+  if (users.length >= 4) return alert("Máximo de 4 utilizadores atingido.");
   users.push({ nome: '', peso: '', altura: '' });
   saveData();
   renderUsers();
 });
 </script>
+<section id="sectionUsers" class="hidden space-y-4 px-4">
+  <h2 class="text-xl font-bold">Gestão de Usuários</h2>
+  <div id="userForms" class="space-y-4"></div>
+  <button id="addUser" class="px-3 py-1 bg-emerald-500 text-white rounded">Adicionar Usuário</button>
+  <div id="userHistory" class="mt-6"></div>
+</section>
+</body>
+</html>
