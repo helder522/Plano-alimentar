@@ -406,7 +406,7 @@ function apagarRegisto(dia) {
 
 addUserBtn.addEventListener('click', () => {
   if (users.length >= 4) return alert("Máximo de 4 utilizadores atingido.");
-  users.push({ nome: '', peso: '', altura: '' });
+  users.push({ nome: '', idade: '', peso: '', altura: '' });
   saveData();
   renderUsers();
 });
