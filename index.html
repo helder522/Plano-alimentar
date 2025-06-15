@@ -322,92 +322,6 @@ btnRecipes.addEventListener('click', () => {
 });
 
 // Novo evento para "Usuários"
-btnUsers.addEventListener('click', () => {
-  sectionPlan.classList.add('hidden');
-  sectionWorkout.classList.add('hidden');
-  sectionRecipes.classList.add('hidden');
-  sectionUsers.classList.remove('hidden');
-  btnUsers.classList.add('bg-emerald-500', 'text-white');
-  btnPlan.classList.remove('bg-emerald-500', 'text-white');
-  btnWorkout.classList.remove('bg-emerald-500', 'text-white');
-  btnRecipes.classList.remove('bg-emerald-500', 'text-white');
-});
-
-// Função de cálculo de IMC e registo
-function calcularIMC(nomeInput, pesoInput, alturaInput, resultadosDiv) {
-  const nome = nomeInput.value.trim();
-  const peso = parseFloat(pesoInput.value);
-  const altura = parseFloat(alturaInput.value);
-  if (!nome || isNaN(peso) || isNaN(altura)) return;
-
-  const imc = peso / (altura * altura);
-  const data = new Date().toLocaleDateString();
-
-  const linha = document.createElement('p');
-  linha.textContent = `${data} - ${nome}: ${peso} kg, IMC: ${imc.toFixed(2)}`;
-  resultadosDiv.appendChild(linha);
-}
-</script>
-
-<section id="sectionUsers" class="hidden space-y-4">
-  <h2 class="text-xl font-semibold">Gestão de Utilizadores</h2>
-  <div class="grid gap-6">
-    <!-- Gerar 4 blocos -->
-    <div class="rounded-xl bg-white p-4 shadow" id="user1">
-      <h3 class="font-semibold mb-2">Utilizador 1</h3>
-      <input type="text" placeholder="Nome" class="border p-1 mb-1 w-full nome">
-      <input type="number" step="0.1" placeholder="Peso (kg)" class="border p-1 mb-1 w-full peso">
-      <input type="number" step="0.01" placeholder="Altura (m)" class="border p-1 mb-2 w-full altura">
-      <button class="bg-emerald-500 text-white px-3 py-1 rounded calculate-btn">Calcular IMC</button>
-      <div class="mt-2 text-sm resultados"></div>
-    </div>
-    <!-- Repete para user2, user3, user4 -->
-    <div class="rounded-xl bg-white p-4 shadow" id="user2">
-      <h3 class="font-semibold mb-2">Utilizador 2</h3>
-      <input type="text" placeholder="Nome" class="border p-1 mb-1 w-full nome">
-      <input type="number" step="0.1" placeholder="Peso (kg)" class="border p-1 mb-1 w-full peso">
-      <input type="number" step="0.01" placeholder="Altura (m)" class="border p-1 mb-2 w-full altura">
-      <button class="bg-emerald-500 text-white px-3 py-1 rounded calculate-btn">Calcular IMC</button>
-      <div class="mt-2 text-sm resultados"></div>
-    </div>
-    <div class="rounded-xl bg-white p-4 shadow" id="user3">
-      <h3 class="font-semibold mb-2">Utilizador 3</h3>
-      <input type="text" placeholder="Nome" class="border p-1 mb-1 w-full nome">
-      <input type="number" step="0.1" placeholder="Peso (kg)" class="border p-1 mb-1 w-full peso">
-      <input type="number" step="0.01" placeholder="Altura (m)" class="border p-1 mb-2 w-full altura">
-      <button class="bg-emerald-500 text-white px-3 py-1 rounded calculate-btn">Calcular IMC</button>
-      <div class="mt-2 text-sm resultados"></div>
-    </div>
-    <div class="rounded-xl bg-white p-4 shadow" id="user4">
-      <h3 class="font-semibold mb-2">Utilizador 4</h3>
-      <input type="text" placeholder="Nome" class="border p-1 mb-1 w-full nome">
-      <input type="number" step="0.1" placeholder="Peso (kg)" class="border p-1 mb-1 w-full peso">
-      <input type="number" step="0.01" placeholder="Altura (m)" class="border p-1 mb-2 w-full altura">
-      <button class="bg-emerald-500 text-white px-3 py-1 rounded calculate-btn">Calcular IMC</button>
-      <div class="mt-2 text-sm resultados"></div>
-    </div>
-  </div>
-</section>
-
-<script>
-document.querySelectorAll('.calculate-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const container = btn.closest('div');
-    const nome = container.querySelector('.nome');
-    const peso = container.querySelector('.peso');
-    const altura = container.querySelector('.altura');
-    const resultados = container.querySelector('.resultados');
-    calcularIMC(nome, peso, altura, resultados);
-  });
-});
-<!-- Secção de Usuários -->
-<section class="hidden space-y-4" id="sectionUsers">
-  <h2 class="text-xl font-bold">Gestão de Usuários</h2>
-  <div id="userForms" class="space-y-4"></div>
-  <button id="addUser" class="px-3 py-1 bg-emerald-500 text-white rounded">Adicionar Usuário</button>
-  <div id="userHistory" class="mt-6"></div>
-</section>
-
 <script>
 const btnUsers = document.getElementById('btnUsers');
 const sectionUsers = document.getElementById('sectionUsers');
@@ -493,4 +407,3 @@ addUserBtn.addEventListener('click', () => {
   renderUsers();
 });
 </script>
-
