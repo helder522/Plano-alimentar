@@ -286,32 +286,6 @@
 </section>
 <script>
 const btnPlan = document.getElementById('btnPlan');
-const btnRecipes = document.getElementById('btnRecipes');
-const sectionPlan = document.getElementById('sectionPlan');
-const sectionRecipes = document.getElementById('sectionRecipes');
-function activate(tab) {
-  if (tab === 'plan') {
-    sectionPlan.classList.remove('hidden');
-    sectionRecipes.classList.add('hidden');
-    btnPlan.classList.replace('bg-emerald-100','bg-emerald-500');
-    btnPlan.classList.replace('text-emerald-700','text-white');
-    btnRecipes.classList.replace('bg-emerald-500','bg-emerald-100');
-    btnRecipes.classList.replace('text-white','text-emerald-700');
-  } else {
-    sectionRecipes.classList.remove('hidden');
-    sectionPlan.classList.add('hidden');
-    btnRecipes.classList.replace('bg-emerald-100','bg-emerald-500');
-    btnRecipes.classList.replace('text-emerald-700','text-white');
-    btnPlan.classList.replace('bg-emerald-500','bg-emerald-100');
-    btnPlan.classList.replace('text-white','text-emerald-700');
-  }
-}
-btnPlan.addEventListener('click', () => activate('plan'));
-btnRecipes.addEventListener('click', () => activate('recipes'));
-</script>
-
-<script>
-const btnPlan = document.getElementById('btnPlan');
 const btnWorkout = document.getElementById('btnWorkout');
 const btnRecipes = document.getElementById('btnRecipes');
 
